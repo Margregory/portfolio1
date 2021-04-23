@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    background-color: #261e4b;
+    text-align: center;
+}
+/*Encabezado y Pie de pagina*/
+header, footer{
+    padding: 3rem;
+    background-color: #261e4b;
+}
+
+header h1, header p, h2, h3, h4{
+    line-height: 2rem;
+    font-variant: small-caps;
+    text-align: center;
+    padding: 1.5rem;
+    margin: auto;
+}
+
+/*Navegacion*/
+#relleno{
+    width: 100%;
+    height: 2.5rem;
+    background-color: #261e4b;
+}
+nav{
+    width: 100%;
+    background-color: #261e4b;
+    position: fixed;
+    border-bottom: 1px solid #261e4b;
+    box-shadow: 0 0 20px black;
+    z-index: 100;
+}
+
+#menu{
+    width: 2.5rem;
+    line-height: 2rem;
+    outline: none;
+    border: 2px solid #ddd;
+    font-size: 2rem;
+    color:#ddd;
+    background-color: transparent;
+    float: right;
+    margin-right: 1rem;
+}
+
+.menu{
+    height: 0;
+    overflow: hidden;
+    list-style: none;
+}
+.openMenu {
+    height: auto;
+}
+
+.menu li, .tarjetas a{
+    width: auto;
+    height: 2.5rem;
+    line-height: 3rem;
+    background-color: #261e4b;
+    text-align: center;
+    list-style: none;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.tarjetas a{
+    border: 1px solid #ddd;
+}
+.menu a, .tarjetas a, #mapadesitio a{
+        color: white;
+        padding: 0.5rem;
+        text-decoration: none;
+       /* cursor: pointer;*/
+}
+
+.menu a:hover{
+    background-color: #05040a;
+}
+
+/*Contenido Principal*/
+main{
+    padding: 2rem;
+}
+
+article, section, .final, .footer{ 
+
+    padding: 0.5rem 0;
+    margin: auto;
+}
+.final p, .footer, .intermedio p{
+    text-align: justify;
+    line-height: 2rem;
+    padding: 1rem;
+}
+.espacio{
+    padding:1rem;
+	text-align: center;
+	/*background-color: #48F;*/
+}
+
+.tarjetas{
+    margin: 1rem;
+    text-align: center;
+    /*background-color: bisque;*/
+    color: black;
+    overflow: hidden;
+}
+.tarjetas img:hover{
+    transform: scale(1.1);
+}
+.inicial img,  .tarjetas{
+    width:70vw;
+    box-shadow: 0 0 15px black ;
+}
+
+.mediavid{
+    width: 70vw;
+    overflow: hidden;
+	/*background-color: rgb(88, 125, 161);
+	position: relative;*/
+	padding:0;
+    border:0;
+    margin: 1rem;
+}
+/*
+ .mediavid {
+    position:absolute;
+    top:0;
+    left:0;
+    width:50vw;
+}
+/*.mediavid4by{
+    padding-bottom: 75%;
+}*/
+ iframe {
+    width: 65vw;
+    height: 20vw;
+}
+
+#mapadesitio li{
+    width: 6rem;
+    height: 2rem;
+    text-align: center;
+    list-style: none;
+    color: white;
+    padding-top: 0.5em;
+    letter-spacing: 0.5px;
+    margin: auto;
+}
+
+.social img{
+    width: 2vw;
+}
+
+/*Responsive*/
+/*SMALL*/
+@media screen and (max-width: 576px){
+    article, section, footer, .mediavid{
+        max-width: 350px;
+        margin: 1rem auto;
+    }
+    .tarjetas{
+        margin: 20px auto;
+    }
+   
+    iframe{
+     
+       /* max-width: 350px;*/
+        height: 300px;
+    }
+    .social img{
+        width: 30px;
+    }
+
+}
+
+/*MEDIUM*/
+@media screen and (min-width:576px) and ( max-width: 768px){
+    /*Contenido Principal*/
+        main{
+            padding: 10px;
+        }
+        article{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-width: 720px;
+        }
+        .espacio{
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        .tarjetas, .tarjetas p{
+            max-width: 350px;
+            margin: 10px auto;
+        }
+        
+        .espacio img{
+            max-width: 300px;
+        }
+        .mediavid{
+            min-width: 550px;
+            max-width: 720px;
+            margin: auto;
+        }
+        .mediavid p{
+            padding-top: 20px;
+        }
+        iframe{
+            min-width: 550px;
+            height: 300px;
+        }
+        .social img{
+            width: 40px;
+        }
+        .contacto, #ubicacion{
+            margin: auto;
+        }
+}
+
+/*Large Devices (LG) - tablets(landscape), desktop*/
+@media screen and (min-width:780px) and (max-width: 992px){
+    /*Navegacion*/
+        #menu{
+            display: none;
+        }
+        .menu{
+            display: flex;
+            justify-content: flex-end;
+            height: auto;
+        }
+        .menu a{
+            padding:.5rem 1rem;
+        }
+    /*Contenido Principal*/
+        section, article, footer{
+            max-width: 960px;
+            padding: 0;
+        }
+        .tarjetas{
+            max-width: 420px;
+            padding:.5rem;
+            margin: 0.5rem 0.5rem;
+        }
+        
+        .inicial img{
+            max-width: 400px;
+        }
+        .mediavid{
+            width: 100%;
+        }
+        .footer, .inicial{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            
+        }
+        iframe{
+            min-width: 450px;
+        }
+
+        .mediavid iframe{
+            min-width: 550px;
+            height: 300px;
+        }
+        .mediavid p{
+            margin-top: 20px;
+        }
+    }
+    
+    @media screen and (min-width: 1200px){
+        #menu{
+            display: none;
+        }
+        .menu{
+            display: flex;
+            justify-content: flex-end;
+            height: auto;
+        }
+        .menu a{
+            padding:.5rem 1rem;
+        }
+    /*Contenido Principal*/
+            
+
+        article{
+            max-width: fit-content;
+        }
+        section{
+            padding:.5rem;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            max-width: fit-content;
+        }
+
+        .inicial img{
+            max-width: 400px;
+        }
+        
+        .espacio {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            max-width: fit-content;
+        }
+
+        .mediavid {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .mediavid iframe{
+            min-width: 550px;
+            height: 400px;
+            align-self: center;
+        }
+
+       .contacto, #ubicacion{
+            width: 40vw;
+        }
+        
+        #ubicacion iframe{
+            width: 80%;
+        }
+    }
